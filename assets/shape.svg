@@ -1,0 +1,19 @@
+<svg width="87" height="114" viewBox="0 0 87 114" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="32.166%" y1="0%" x2="67.834%" y2="100%" id="atjo96pxjc">
+            <stop stop-color="#FFF" stop-opacity=".8" offset="0%"/>
+            <stop stop-color="#FFF" stop-opacity=".4" offset="100%"/>
+        </linearGradient>
+        <filter x="-82.6%" y="-46.5%" width="265.1%" height="198.6%" filterUnits="objectBoundingBox" id="5yq9bqc39a">
+            <feMorphology radius=".5" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1"/>
+        </filter>
+        <path d="M97 191.712C97 179.74 87.39 170 75.58 170 63.735 170 54 179.799 54 191.712c0 11.08 8.416 20.233 19.2 21.42v14.5h-7.141a2.387 2.387 0 0 0-2.38 2.395 2.387 2.387 0 0 0 2.38 2.394h7.14v7.184A2.387 2.387 0 0 0 75.58 242a2.387 2.387 0 0 0 2.38-2.395v-7.184h7.14a2.387 2.387 0 0 0 2.38-2.394 2.387 2.387 0 0 0-2.38-2.395h-7.14V213.13C88.655 211.935 97 202.786 97 191.712zm-38.24 0c0-9.331 7.545-16.923 16.82-16.923 9.186 0 16.66 7.592 16.66 16.923 0 9.243-7.474 16.763-16.66 16.763-9.275 0-16.82-7.52-16.82-16.763z" id="dbybplor4b"/>
+    </defs>
+    <g transform="translate(-32 -150)" fill-rule="nonzero" fill="none">
+        <use fill="#000" filter="url(#5yq9bqc39a)" xlink:href="#dbybplor4b"/>
+        <use fill="url(#atjo96pxjc)" xlink:href="#dbybplor4b"/>
+    </g>
+</svg>
