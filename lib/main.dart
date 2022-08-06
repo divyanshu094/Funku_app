@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:funku/choose_an_avatar.dart';
 import 'package:funku/complited.dart';
+import 'package:funku/components/components/variables.dart';
 import 'package:funku/contact_us.dart';
 import 'package:funku/dashboard.dart';
 import 'package:funku/first_page.dart';
@@ -15,12 +16,13 @@ import 'package:funku/rating.dart';
 import 'package:funku/sign_up.dart';
 import 'package:funku/terms.dart';
 import 'package:funku/tests/chipsssssss.dart';
+import 'package:funku/tests/color_change.dart';
 import 'package:funku/verify.dart';
 import 'package:funku/verify_login.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'login',
+    initialRoute: 'datechecker',
     routes: {
       'login':(context) => FirstScreen(),
       'signup':(context) => SignUp(),
@@ -39,9 +41,11 @@ void main() {
       'notification':(context) => NotificationToday(),
       'genure':(context) => MusicGenre(),
       'test':(context) => HomePage(),
-      'rating':(context) => RatingPage()
+      'rating':(context) => RatingPage(),
+      'color':(context) => ColorChange(),
+      'datechecker':(context) => MyeApp()
 
-    },
-  )
+      },
+    )
   );
 }
