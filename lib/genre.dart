@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:funku/persionaldetails.dart';
 import 'package:funku/preference_drink.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:funku/components/components/variables.dart';
+// import 'package:funku/components/components/variables.dart';
 import 'dashboard.dart';
 
 bool _click1 = true;
