@@ -22,7 +22,7 @@ import 'package:funku/verify_login.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'datechecker',
+    initialRoute: 'login',
     routes: {
       'login':(context) => FirstScreen(),
       'signup':(context) => SignUp(),
