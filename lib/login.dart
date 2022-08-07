@@ -31,6 +31,25 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   final items = ['+91','+01','+02','+03'];
   String value = '+91';
+  bool isButtonActive = false;
+  late TextEditingController controller;
+  @override
+  void initState() {
+    super.initState();
+
+    controller = TextEditingController();
+    controller.addListener(() { 
+      final isButtonActive = controller.text.isNotEmpty;
+      setState(() => this.isButtonActive = isButtonActive);
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -119,6 +138,7 @@ class _BodyState extends State<Body> {
                           LengthLimitingTextInputFormatter(10),
                           FilteringTextInputFormatter.digitsOnly,
                         ],
+                        controller: controller,
                       
                     ),
                        )
@@ -187,13 +207,15 @@ class _BodyState extends State<Body> {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size.fromHeight(60),
-                          side: BorderSide(width: 2,color: Colors.white),
+                          // side: BorderSide(width: 2,color: Colors.white),
                           shape: StadiumBorder(),
                           primary: Colors.white,
+                          onSurface: Colors.white,
                         ),
-                        onPressed: () {
+                         onPressed: isButtonActive ? 
+                        () {
                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => VerifyLogin()));
-                            }, child: Text("Login",style: TextStyle(
+                            } : null, child: Text("Login",style: TextStyle(
                 color: Color.fromARGB(255, 32, 9, 99),
                 fontSize: 16,
                 fontWeight: FontWeight.bold )),
