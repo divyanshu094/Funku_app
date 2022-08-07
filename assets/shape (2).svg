@@ -1,0 +1,19 @@
+<svg width="91" height="115" viewBox="0 0 91 115" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="28.694%" y1="0%" x2="71.306%" y2="100%" id="shvz039npc">
+            <stop stop-color="#FFF" stop-opacity=".8" offset="0%"/>
+            <stop stop-color="#FFF" stop-opacity=".4" offset="100%"/>
+        </linearGradient>
+        <filter x="-75.5%" y="-46.5%" width="251.1%" height="198.6%" filterUnits="objectBoundingBox" id="96kz60hpha">
+            <feMorphology radius=".5" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1"/>
+        </filter>
+        <path d="M299.5 242c-6.528 0-12.076-2.333-16.646-7S276 224.667 276 218c0-6.2 1.975-11.533 5.924-16 3.95-4.467 8.829-7.067 14.639-7.8V170h5.875v24.2c5.875.733 10.77 3.333 14.687 7.8S323 211.8 323 218c0 6.667-2.285 12.333-6.854 17-4.57 4.667-10.118 7-16.646 7zm0-6c4.439 0 8.258-1.433 11.456-4.3 3.199-2.867 5.157-6.433 5.875-10.7H282.17c.718 4.267 2.692 7.833 5.924 10.7 3.231 2.867 7.033 4.3 11.407 4.3zm-17.43-21h34.86c-.719-4.333-2.694-7.917-5.925-10.75S303.94 200 299.5 200c-4.374 0-8.192 1.417-11.456 4.25-3.264 2.833-5.255 6.417-5.973 10.75z" id="mse5uefadb"/>
+    </defs>
+    <g transform="translate(-254 -151)" fill-rule="nonzero" fill="none">
+        <use fill="#000" filter="url(#96kz60hpha)" xlink:href="#mse5uefadb"/>
+        <use fill="url(#shvz039npc)" xlink:href="#mse5uefadb"/>
+    </g>
+</svg>
