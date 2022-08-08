@@ -40,7 +40,7 @@ dependencies:
   flip_card: ^0.6.0
   flutter_swipable: ^1.2.1
   chip_list: ^2.3.3+8
-  
+  row_date_picker: ^0.0.6
 
 
 

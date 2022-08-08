@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:funku/choose_an_avatar.dart';
 import 'package:funku/dashboard.dart';
-import 'package:funku/verify_login.dart';
+import 'package:funku/pd_birthday.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'components/pd.dart';
@@ -167,7 +167,7 @@ class _BodyState extends State<Body> {
                         ),
                         onPressed: isButtonActive ?
                         () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyApp()));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => PdBirthday()));
                             } : null,
                              child: Text("Next",style: TextStyle(
                 color: Color.fromARGB(255, 32, 9, 99),
