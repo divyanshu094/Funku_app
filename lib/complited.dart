@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ComP extends StatelessWidget {
@@ -66,6 +67,17 @@ class Body extends StatelessWidget {
           ),
               ],
             ),
+            Container(
+              height:  MediaQuery.of(context).size.height*0.89,
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SvgPicture.asset('compLogo.svg')
+                  ],
+                ),
+              ),
+            )
           ]
         ),
       ),

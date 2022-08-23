@@ -56,29 +56,29 @@ bool _click1 = false;
  Color _containerColorbottom10 = Colors.white10;
  Color _textColor10 = Colors.white30;
 
-class MusicGenre extends StatefulWidget {
-  const MusicGenre({ Key? key }) : super(key: key);
+class AmbienceGenre extends StatefulWidget {
+  const AmbienceGenre({ Key? key }) : super(key: key);
 
   @override
-  State<MusicGenre> createState() => _MusicGenreState();
+  State<AmbienceGenre> createState() => _AmbienceGenreState();
 }
 
-class _MusicGenreState extends State<MusicGenre> {
+class _AmbienceGenreState extends State<AmbienceGenre> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Music(),
+      body: Ambience(),
     );
   }
 }
-class Music extends StatefulWidget {
-   Music({ Key? key }) : super(key: key);
+class Ambience extends StatefulWidget {
+   Ambience({ Key? key }) : super(key: key);
 
   @override
-  State<Music> createState() => _MusicState();
+  State<Ambience> createState() => _AmbienceState();
 }
 
-class _MusicState extends State<Music> {
+class _AmbienceState extends State<Ambience> {
   
   @override
   Widget build(BuildContext context) {
@@ -106,7 +106,18 @@ class _MusicState extends State<Music> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("What genre of music you prefer?", style: GoogleFonts.merriweather(
+                        Text("What kind of Ambience you", style: GoogleFonts.merriweather(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white
+                        )
+                      ), 
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("enjoy?", style: GoogleFonts.merriweather(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
                           color: Colors.white
@@ -158,7 +169,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group.svg",color: _textColor1,),
+                                              child: SvgPicture.asset("assets/preference/group2.svg",color: _textColor1,),
                                               height: 93,
                                             ),
                                             Container(
@@ -173,7 +184,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Bollywood',
+                                                      'Cafe Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -217,7 +228,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group2.svg",color: _textColor2,),
+                                              child: SvgPicture.asset("assets/preference/group4.svg",color: _textColor2,),
                                               height: 93,
                                             ),
                                             Container(
@@ -232,7 +243,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Punjabi',
+                                                      'Sports Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -276,7 +287,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child:SvgPicture.asset("assets/genure/group3.svg",color: _textColor3,),
+                                              child:SvgPicture.asset("assets/preference/group5.svg",color: _textColor3,),
                                               height: 93,
                                             ),
                                             Container(
@@ -291,7 +302,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Live',
+                                                      'Rooftop Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -343,7 +354,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group4.svg",color: _textColor4,),
+                                              child: SvgPicture.asset("assets/preference/group6.svg",color: _textColor4,),
                                               height: 93,
                                             ),
                                             Container(
@@ -358,7 +369,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'EDM',
+                                                      'Brewery',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -403,7 +414,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group5.svg",color: _textColor5,),
+                                              child: SvgPicture.asset("assets/preference/group7.svg",color: _textColor5,),
                                               height: 93,
                                             ),
                                             Container(
@@ -418,7 +429,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Rock',
+                                                      'Gastro Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -462,7 +473,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group6.svg",color: _textColor6,),
+                                              child: SvgPicture.asset("assets/preference/group8.svg",color: _textColor6,),
                                               height: 93,
                                             ),
                                             Container(
@@ -477,7 +488,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Jazz',
+                                                      'Pubs',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -529,7 +540,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group7.svg",color: _textColor7,),
+                                              child: SvgPicture.asset("assets/preference/group9.svg",color: _textColor7,),
                                               height: 93,
                                             ),
                                             Container(
@@ -544,7 +555,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Pop music',
+                                                      'Hotel Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -589,7 +600,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group8.svg",color: _textColor8,),
+                                              child: SvgPicture.asset("assets/preference/group10.svg",color: _textColor8,),
                                               height: 93,
                                             ),
                                             Container(
@@ -604,7 +615,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Electro/Techno',
+                                                      'Lounge Bar',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -648,7 +659,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group9.svg",color: _textColor9,),
+                                              child: SvgPicture.asset("assets/preference/group11.svg",color: _textColor9,),
                                               height: 93,
                                             ),
                                             Container(
@@ -663,7 +674,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'House music',
+                                                      'Nightclubs',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -715,7 +726,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group10.svg",color: _textColor10,),
+                                              child: SvgPicture.asset("assets/preference/group12.svg",color: _textColor10,),
                                               height: 93,
                                             ),
                                             Container(
@@ -730,7 +741,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Indie rock',
+                                                      'Live Music Venue',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -811,114 +822,3 @@ class _MusicState extends State<Music> {
     );
   }
 }
-
-// Widget check(){
-  
-//     if (_isclicked) {
-      
-//       return InkWell(
-//       child: Container(
-//         decoration: BoxDecoration(
-//           gradient: LinearGradient(
-//              begin: Alignment.topCenter,
-//               end: Alignment.bottomCenter,
-//               colors: [Colors.white30, Colors.white10],
-//           ),
-//           borderRadius: BorderRadius.all(Radius.circular(10)),
-//         ),
-//         height: 125,
-//         width: 99,
-//         child: Column(
-//           children: [
-//             Container(
-//               child: Icon(Icons.menu_outlined,color: Colors.grey,),
-//               height: 93,
-//             ),
-//             Container(
-//               height: 32,
-//               width: 99,
-//               decoration: BoxDecoration(
-//                 color: Colors.white.withOpacity(0.3),
-//                 borderRadius: BorderRadius.only(
-//                   bottomLeft: Radius.circular(10),
-//                   bottomRight: Radius.circular(10),
-//                   ),
-//                 ),
-//               child: Center(
-//                 child: Text(
-//                       'Bollywood',
-//                       style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 10,
-//                           fontWeight: FontWeight.w400),
-//                     ),
-//               ),
-              
-//             )
-//           ],
-//         ),
-//       ),
-      
-//       onTap: () { 
-//         print("tapped");
-//         _isclicked =!_isclicked;
-//         print(_isclicked);
-//       }
-//     );
-//     } else {
-//       return genureSelected();
-//     }
-  
-// }
-
-//   Widget genureSelected(){
-//     return InkWell(
-//       child: Container(
-//         decoration: BoxDecoration(
-//           gradient: LinearGradient(
-//              begin: Alignment.topCenter,
-//               end: Alignment.bottomCenter,
-//               colors: [Colors.white, Colors.white],
-//           ),
-//           borderRadius: BorderRadius.all(Radius.circular(10)),
-//         ),
-//         height: 125,
-//         width: 99,
-//         child: Column(
-//           children: [
-//             Container(
-//               child: Icon(Icons.menu_outlined,color: Color.fromARGB(255, 32, 9, 99),),
-//               height: 93,
-//             ),
-//             Container(
-//               height: 32,
-//               width: 99,
-//               decoration: BoxDecoration(
-//                 color: Color.fromARGB(255, 32, 9, 99),
-//                 borderRadius: BorderRadius.only(
-//                   bottomLeft: Radius.circular(10),
-//                   bottomRight: Radius.circular(10),
-//                   ),
-//                 ),
-//               child: Center(
-//                 child: Text(
-//                       'Bollywood',
-//                       style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 10,
-//                           fontWeight: FontWeight.w400),
-//                     ),
-//               ),
-              
-//             )
-//           ],
-//         ),
-//       ),
-      
-//       onTap: () { 
-//       print('tapped');
-//       _isclicked =!_isclicked;
-//       print(_isclicked);
-//       }
-//     );
-  // }

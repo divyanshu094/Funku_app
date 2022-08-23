@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:funku/preference/drink.dart';
+import 'package:funku/preference/ambiance.dart';
 import 'package:funku/preference_drink.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -56,29 +56,64 @@ bool _click1 = false;
  Color _containerColorbottom10 = Colors.white10;
  Color _textColor10 = Colors.white30;
 
-class MusicGenre extends StatefulWidget {
-  const MusicGenre({ Key? key }) : super(key: key);
+ bool _click11 = false;
+ Color _containerColortop11 = Colors.white30;
+ Color _containerColorbottom11 = Colors.white10;
+ Color _textColor11 = Colors.white30;
+
+ bool _click12 = false;
+ Color _containerColortop12 = Colors.white30;
+ Color _containerColorbottom12 = Colors.white10;
+ Color _textColor12 = Colors.white30;
+ 
+ bool _click13 = false;
+ Color _containerColortop13 = Colors.white30;
+ Color _containerColorbottom13 = Colors.white10;
+ Color _textColor13 = Colors.white30;
+ 
+ bool _click14 = false;
+ Color _containerColortop14 = Colors.white30;
+ Color _containerColorbottom14 = Colors.white10;
+ Color _textColor14 = Colors.white30;
+ 
+ bool _click15 = false;
+ Color _containerColortop15 = Colors.white30;
+ Color _containerColorbottom15 = Colors.white10;
+ Color _textColor15 = Colors.white30;
+ 
+ bool _click16 = false;
+ Color _containerColortop16 = Colors.white30;
+ Color _containerColorbottom16 = Colors.white10;
+ Color _textColor16 = Colors.white30;
+ 
+ bool _click17 = false;
+ Color _containerColortop17 = Colors.white30;
+ Color _containerColorbottom17 = Colors.white10;
+ Color _textColor17 = Colors.white30;
+ 
+class DrinkGenre extends StatefulWidget {
+  const DrinkGenre({ Key? key }) : super(key: key);
 
   @override
-  State<MusicGenre> createState() => _MusicGenreState();
+  State<DrinkGenre> createState() => _DrinkGenreState();
 }
 
-class _MusicGenreState extends State<MusicGenre> {
+class _DrinkGenreState extends State<DrinkGenre> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Music(),
+      body: Drink(),
     );
   }
 }
-class Music extends StatefulWidget {
-   Music({ Key? key }) : super(key: key);
+class Drink extends StatefulWidget {
+   Drink({ Key? key }) : super(key: key);
 
   @override
-  State<Music> createState() => _MusicState();
+  State<Drink> createState() => _DrinkState();
 }
 
-class _MusicState extends State<Music> {
+class _DrinkState extends State<Drink> {
   
   @override
   Widget build(BuildContext context) {
@@ -106,7 +141,7 @@ class _MusicState extends State<Music> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("What genre of music you prefer?", style: GoogleFonts.merriweather(
+                        Text("What kind of Drink you prefer?", style: GoogleFonts.merriweather(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
                           color: Colors.white
@@ -158,7 +193,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group.svg",color: _textColor1,),
+                                              child: SvgPicture.asset("assets/drink/group2.svg",color: _textColor1,),
                                               height: 93,
                                             ),
                                             Container(
@@ -173,7 +208,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Bollywood',
+                                                      'Imported beer',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -217,7 +252,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group2.svg",color: _textColor2,),
+                                              child: SvgPicture.asset("assets/drink/group3 (3).svg",color: _textColor2,),
                                               height: 93,
                                             ),
                                             Container(
@@ -232,7 +267,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Punjabi',
+                                                      'Draught beer',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -276,7 +311,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child:SvgPicture.asset("assets/genure/group3.svg",color: _textColor3,),
+                                              child:SvgPicture.asset("assets/drink/group6.svg",color: _textColor3,),
                                               height: 93,
                                             ),
                                             Container(
@@ -291,7 +326,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Live',
+                                                      'Indian beer',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -343,7 +378,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group4.svg",color: _textColor4,),
+                                              child: SvgPicture.asset("assets/drink/group4.svg",color: _textColor4,),
                                               height: 93,
                                             ),
                                             Container(
@@ -358,7 +393,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'EDM',
+                                                      'Brandy',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -403,7 +438,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group5.svg",color: _textColor5,),
+                                              child: SvgPicture.asset("assets/drink/group5.svg",color: _textColor5,),
                                               height: 93,
                                             ),
                                             Container(
@@ -418,7 +453,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Rock',
+                                                      'Cognac',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -462,7 +497,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group6.svg",color: _textColor6,),
+                                              child: SvgPicture.asset("assets/drink/group7.svg",color: _textColor6,),
                                               height: 93,
                                             ),
                                             Container(
@@ -477,7 +512,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Jazz',
+                                                      'Champagne',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -529,7 +564,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group7.svg",color: _textColor7,),
+                                              child: SvgPicture.asset("assets/drink/group8.svg",color: _textColor7,),
                                               height: 93,
                                             ),
                                             Container(
@@ -544,7 +579,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Pop music',
+                                                      'Cocktails',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -589,7 +624,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group8.svg",color: _textColor8,),
+                                              child: SvgPicture.asset("assets/drink/group9.svg",color: _textColor8,),
                                               height: 93,
                                             ),
                                             Container(
@@ -604,7 +639,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Electro/Techno',
+                                                      'Gin',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -648,7 +683,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group9.svg",color: _textColor9,),
+                                              child: SvgPicture.asset("assets/drink/group10.svg",color: _textColor9,),
                                               height: 93,
                                             ),
                                             Container(
@@ -663,7 +698,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'House music',
+                                                      'Martini',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -715,7 +750,7 @@ class _MusicState extends State<Music> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              child: SvgPicture.asset("assets/genure/group10.svg",color: _textColor10,),
+                                              child: SvgPicture.asset("assets/drink/group11.svg",color: _textColor10,),
                                               height: 93,
                                             ),
                                             Container(
@@ -730,7 +765,7 @@ class _MusicState extends State<Music> {
                                                 ),
                                               child: const Center(
                                                 child: Text(
-                                                      'Indie rock',
+                                                      'Mocktails',
                                                       style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 10,
@@ -760,14 +795,439 @@ class _MusicState extends State<Music> {
                                         },
                                     ),
                                    
-                                   Container(
+                                    InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop11, _containerColorbottom11],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
                                         height: 125,
                                         width: 99,
                                         child: Column(
-                                          
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group12.svg",color: _textColor11,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor11,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Rum',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
                                         ),
                                       ),
-                                      Container(
+      
+                                      onTap: () {
+                                          _click11  ?
+                                          setState(() {
+                                            _textColor11 = Colors.white30;            
+                                            _containerColortop11 = Colors.white30;
+                                            _containerColorbottom11 = Colors.white10;
+                                            _click11  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop11 = Colors.white;
+                                            _containerColorbottom11 = Colors.white;
+                                            _textColor11 = Color.fromARGB(255, 32, 9, 99);
+                                            _click11  = true;
+                                          }); 
+                                        },
+                                    ),
+                                    InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop12, _containerColorbottom12],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group13.svg",color: _textColor12,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor12,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Tequila',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click12  ?
+                                          setState(() {
+                                            _textColor12 = Colors.white30;            
+                                            _containerColortop12= Colors.white30;
+                                            _containerColorbottom12 = Colors.white10;
+                                            _click12  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop12 = Colors.white;
+                                            _containerColorbottom12 = Colors.white;
+                                            _textColor12 = Color.fromARGB(255, 32, 9, 99);
+                                            _click12  = true;
+                                          }); 
+                                        },
+                                    ),
+                                  ],
+                                ),
+                               
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row( 
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                   InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop13, _containerColorbottom13],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group14.svg",color: _textColor13,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor13,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Vermouth',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click13  ?
+                                          setState(() {
+                                            _textColor13 = Colors.white30;            
+                                            _containerColortop13 = Colors.white30;
+                                            _containerColorbottom13 = Colors.white10;
+                                            _click13  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop13 = Colors.white;
+                                            _containerColorbottom13 = Colors.white;
+                                            _textColor13 = Color.fromARGB(255, 32, 9, 99);
+                                            _click13  = true;
+                                          }); 
+                                        },
+                                    ),
+                                   
+                                    InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop14, _containerColorbottom14],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group15.svg",color: _textColor14,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor14,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Vodka',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click14  ?
+                                          setState(() {
+                                            _textColor14 = Colors.white30;            
+                                            _containerColortop14 = Colors.white30;
+                                            _containerColorbottom14 = Colors.white10;
+                                            _click14  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop14 = Colors.white;
+                                            _containerColorbottom14 = Colors.white;
+                                            _textColor14 = Color.fromARGB(255, 32, 9, 99);
+                                            _click14  = true;
+                                          }); 
+                                        },
+                                    ),
+                                    InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop15, _containerColorbottom15],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group16.svg",color: _textColor15,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor15,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Whiskey',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click15  ?
+                                          setState(() {
+                                            _textColor15 = Colors.white30;            
+                                            _containerColortop15 = Colors.white30;
+                                            _containerColorbottom15 = Colors.white10;
+                                            _click15  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop15 = Colors.white;
+                                            _containerColorbottom15 = Colors.white;
+                                            _textColor15 = Color.fromARGB(255, 32, 9, 99);
+                                            _click15  = true;
+                                          }); 
+                                        },
+                                    ),
+                                  ],
+                                ),
+                                 const SizedBox(
+                                  height: 15,
+                                ),
+                                Row( 
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                   InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop16, _containerColorbottom16],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group17.svg",color: _textColor16,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor16,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'Wine',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click16  ?
+                                          setState(() {
+                                            _textColor16 = Colors.white30;            
+                                            _containerColortop16 = Colors.white30;
+                                            _containerColorbottom16 = Colors.white10;
+                                            _click16  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop16 = Colors.white;
+                                            _containerColorbottom16 = Colors.white;
+                                            _textColor16 = Color.fromARGB(255, 32, 9, 99);
+                                            _click16  = true;
+                                          }); 
+                                        },
+                                    ),
+                                   
+                                    InkWell(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topCenter,
+                                              end: Alignment.bottomCenter,
+                                              colors: [_containerColortop17, _containerColorbottom17],
+                                          ),
+                                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                                        ),
+                                        height: 125,
+                                        width: 99,
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              child: SvgPicture.asset("assets/drink/group18.svg",color: _textColor17,),
+                                              height: 93,
+                                            ),
+                                            Container(
+                                              height: 32,
+                                              width: 99,
+                                              decoration: BoxDecoration(
+                                                color: _textColor17,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft: Radius.circular(10),
+                                                  bottomRight: Radius.circular(10),
+                                                  ),
+                                                ),
+                                              child: const Center(
+                                                child: Text(
+                                                      'IMFL',
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10,
+                                                          fontWeight: FontWeight.w400),
+                                                    ),
+                                              ),
+                                              
+                                            )
+                                          ],
+                                        ),
+                                      ),
+      
+                                      onTap: () {
+                                          _click17  ?
+                                          setState(() {
+                                            _textColor17 = Colors.white30;            
+                                            _containerColortop17 = Colors.white30;
+                                            _containerColorbottom17 = Colors.white10;
+                                            _click17  = false;
+                                          }) :
+                                          setState(() {
+                                            _containerColortop17 = Colors.white;
+                                            _containerColorbottom17 = Colors.white;
+                                            _textColor17 = Color.fromARGB(255, 32, 9, 99);
+                                            _click17  = true;
+                                          }); 
+                                        },
+                                    ),
+                                     Container(
                                         height: 125,
                                         width: 99,
                                         child: Column(
@@ -795,7 +1255,7 @@ class _MusicState extends State<Music> {
                             primary: Colors.white,
                           ),
                           onPressed: (){
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => DrinkGenre()));
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => AmbienceGenre()));
                           }, 
                           child: const Text('Next',style: TextStyle(
                 color: Color.fromARGB(255, 32, 9, 99),
@@ -812,113 +1272,3 @@ class _MusicState extends State<Music> {
   }
 }
 
-// Widget check(){
-  
-//     if (_isclicked) {
-      
-//       return InkWell(
-//       child: Container(
-//         decoration: BoxDecoration(
-//           gradient: LinearGradient(
-//              begin: Alignment.topCenter,
-//               end: Alignment.bottomCenter,
-//               colors: [Colors.white30, Colors.white10],
-//           ),
-//           borderRadius: BorderRadius.all(Radius.circular(10)),
-//         ),
-//         height: 125,
-//         width: 99,
-//         child: Column(
-//           children: [
-//             Container(
-//               child: Icon(Icons.menu_outlined,color: Colors.grey,),
-//               height: 93,
-//             ),
-//             Container(
-//               height: 32,
-//               width: 99,
-//               decoration: BoxDecoration(
-//                 color: Colors.white.withOpacity(0.3),
-//                 borderRadius: BorderRadius.only(
-//                   bottomLeft: Radius.circular(10),
-//                   bottomRight: Radius.circular(10),
-//                   ),
-//                 ),
-//               child: Center(
-//                 child: Text(
-//                       'Bollywood',
-//                       style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 10,
-//                           fontWeight: FontWeight.w400),
-//                     ),
-//               ),
-              
-//             )
-//           ],
-//         ),
-//       ),
-      
-//       onTap: () { 
-//         print("tapped");
-//         _isclicked =!_isclicked;
-//         print(_isclicked);
-//       }
-//     );
-//     } else {
-//       return genureSelected();
-//     }
-  
-// }
-
-//   Widget genureSelected(){
-//     return InkWell(
-//       child: Container(
-//         decoration: BoxDecoration(
-//           gradient: LinearGradient(
-//              begin: Alignment.topCenter,
-//               end: Alignment.bottomCenter,
-//               colors: [Colors.white, Colors.white],
-//           ),
-//           borderRadius: BorderRadius.all(Radius.circular(10)),
-//         ),
-//         height: 125,
-//         width: 99,
-//         child: Column(
-//           children: [
-//             Container(
-//               child: Icon(Icons.menu_outlined,color: Color.fromARGB(255, 32, 9, 99),),
-//               height: 93,
-//             ),
-//             Container(
-//               height: 32,
-//               width: 99,
-//               decoration: BoxDecoration(
-//                 color: Color.fromARGB(255, 32, 9, 99),
-//                 borderRadius: BorderRadius.only(
-//                   bottomLeft: Radius.circular(10),
-//                   bottomRight: Radius.circular(10),
-//                   ),
-//                 ),
-//               child: Center(
-//                 child: Text(
-//                       'Bollywood',
-//                       style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 10,
-//                           fontWeight: FontWeight.w400),
-//                     ),
-//               ),
-              
-//             )
-//           ],
-//         ),
-//       ),
-      
-//       onTap: () { 
-//       print('tapped');
-//       _isclicked =!_isclicked;
-//       print(_isclicked);
-//       }
-//     );
-  // }

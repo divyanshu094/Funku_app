@@ -22,7 +22,7 @@ class TodayNo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(4, (index) => CatalogModel.items[0]);
+    final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
@@ -44,7 +44,7 @@ class TodayNo extends StatelessWidget {
             Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                     Text("Notification Center", style: GoogleFonts.merriweather(
+                     Text("Notifications", style: GoogleFonts.merriweather(
                        fontSize: 26,
                        fontWeight: FontWeight.normal,
                        color: Colors.white
@@ -55,53 +55,24 @@ class TodayNo extends StatelessWidget {
                 SizedBox(
                   height: 15,
                 ),
-                Row(
-                  
-                  children: [
-                    Padding(padding: EdgeInsets.only(left: 20)),
-                   
-                    TextButton(
-                      onPressed: null, 
-                      child: Text('Today',style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        decoration: TextDecoration.underline
-                      ),)
-                    ),
-                    TextButton(
-                      onPressed:  () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationAll()));
-          }, 
-                      child: Text('Previous',style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white70
-                      ),)
-                    )
-                  ],
-                ),
-                Divider(
-                  height: 2,
-                  color: Colors.white70,
-                  thickness: 2,
-                ),
-                SizedBox(
-                  height: 4,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    
-                    Padding(padding: EdgeInsets.only(right: 20)),
-                   
-                    TextButton(
-                      onPressed: null, 
-                      child: Text('Mark all as Read',style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.white70,
-                        decoration: TextDecoration.underline
-                      ),)
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(right: 18),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      
+                      // Padding(padding: EdgeInsets.only(right: 0)),
+                     
+                      TextButton(
+                        onPressed: null, 
+                        child: Text('Mark all as Read',style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.white70,
+                          decoration: TextDecoration.underline
+                        ),)
+                      ),
+                    ],
+                  ),
                 ),
                  SizedBox(
                   height: 4,
