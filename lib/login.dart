@@ -49,10 +49,13 @@ class _BodyState extends State<Body> {
   sendOTP() async {
     print("Region");
     await _apiProvider
-        .getOTP("9773943384")
+        .getOTP(controller.text)
         .then((value) => setState(() {
               _sessionID = value.sessionid!;
-              print("Region $_sessionID");
+              if (_sessionID != "") {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => VerifyLogin()));
+              }
             }))
         .onError((error, stackTrace) => print(error.toString()));
   }
