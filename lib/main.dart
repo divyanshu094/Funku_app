@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:funku/Create_a_party/Property1.dart';
 import 'package:funku/Create_a_party/add_property1.dart';
@@ -31,32 +33,31 @@ void main() {
   runApp(MaterialApp(
     initialRoute: 'step2',
     routes: {
-      'login':(context) => FirstScreen(),
-      'signup':(context) => SignUp(),
-      'verify':(context) => VerifyPage(),
-      'log':(context) => LogIn(),
-      'ver':(context) => VerifyLogin(),
-      'comp':(context) => ComP(),
-      'terms':(context) => TermsCond(),
-      'privacy':(context) => PrivacyPolicy(),
-      "pd":(context) => PersonalDelails(),
-      "chooseavatar":(context) => ChooseAvatar(),
-      "birthday":(context) => PdBirthday(),
-      'contact':(context) => ContactUs(),
-      'preference':(context) => PreferDrink(),
-      'dashboard':(context) => MyApp(),
-      'notification':(context) => NotificationToday(),
-      'genure':(context) => MusicGenre(),
-      'test':(context) => HomePage(),
-      'rating':(context) => RatingPage(),
-      'datechecker':(context) => MyeApp(),
-      'splashWelcome':(context) => WelcomeSplash(),
-      'property':(context) => AddProperty(),
-      'pyCmp':(context) => PaymentComplete(),
-      'propAdd':(context) => PropertyAdd(),
-      'promoter':(context) => PromoterAdd(),
-      'step2':(context) => StepTwoprop()
-      },
-    )
-  );
+      'login': (context) => FirstScreen(),
+      'signup': (context) => SignUp(),
+      'verify': (context) => VerifyPage(),
+      'log': (context) => LogIn(),
+      'ver': (context) => VerifyLogin(),
+      'comp': (context) => ComP(),
+      'terms': (context) => TermsCond(),
+      'privacy': (context) => PrivacyPolicy(),
+      "pd": (context) => PersonalDelails(),
+      "chooseavatar": (context) => ChooseAvatar(),
+      "birthday": (context) => PdBirthday(),
+      'contact': (context) => ContactUs(),
+      'preference': (context) => PreferDrink(),
+      'dashboard': (context) => MyApp(),
+      'notification': (context) => NotificationToday(),
+      'genure': (context) => MusicGenre(),
+      'test': (context) => HomePage(),
+      'rating': (context) => RatingPage(),
+      'datechecker': (context) => MyeApp(),
+      'splashWelcome': (context) => WelcomeSplash(),
+      'property': (context) => AddProperty(),
+      'pyCmp': (context) => PaymentComplete(),
+      'propAdd': (context) => PropertyAdd(),
+      'promoter': (context) => PromoterAdd(),
+      'step2': (context) => StepTwoprop()
+    },
+  ));
 }
