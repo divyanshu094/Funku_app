@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:funku/add_artist/artist1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -71,13 +72,75 @@ class _BodyState extends State<PropAd> {
                            color: Colors.white
                           )
                         )
-                       ], 
-                       
+                       ],     
                       ),
+
                       SizedBox(
-                        height: MediaQuery.of(context).size.height*0.04,
+                        height: MediaQuery.of(context).size.height*0.02,
                       ),
-                      
+                      Stack(
+                    children: [
+                      Center(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.6,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 6),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                
+                                  children: const [
+                                    Icon(Icons.circle,color: Colors.white,),
+                                    Icon(Icons.circle,color: Colors.white60,),
+                                    Icon(Icons.circle,color: Colors.white60,),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text("Step 1", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 2", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 3", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Center(
+                        child: SizedBox(
+                          height: 40,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset("assets/line.svg",color: Colors.white,width: MediaQuery.of(context).size.width*0.53,),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height*0.02,
+                  ),    
                       Icon(
                           Icons.add_circle_sharp,
                           size:120,

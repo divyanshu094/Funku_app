@@ -29,9 +29,11 @@ import 'package:funku/tests/chipsssssss.dart';
 import 'package:funku/verify.dart';
 import 'package:funku/verify_login.dart';
 
+import 'Create_a_party/property3.dart';
+
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'login',
+    initialRoute: 'step2',
     routes: {
       'login': (context) => FirstScreen(),
       'signup': (context) => SignUp(),
@@ -57,7 +59,7 @@ void main() {
       'pyCmp': (context) => PaymentComplete(),
       'propAdd': (context) => PropertyAdd(),
       'promoter': (context) => PromoterAdd(),
-      'step2': (context) => StepTwoprop()
+      'step2': (context) => PropertyThree()
     },
   ));
 }

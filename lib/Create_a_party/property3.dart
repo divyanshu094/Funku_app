@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:funku/Create_a_party/property2.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 bool _click1 = false;
  Color _containerColortop1 = Colors.white30;
@@ -108,6 +110,83 @@ class _BodyState extends State<Three> {
               child:Column(
                 children: [
                   Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                       children: [
+                         Text("Add a Property", style: GoogleFonts.merriweather(
+                           fontSize: 24,
+                           fontWeight: FontWeight.bold,
+                           color: Colors.white
+                          )
+                        )
+                       ],     
+                      ),
+                      SizedBox(
+                    height: MediaQuery.of(context).size.height*0.02,
+                  ),
+                  Stack(
+                    children: [
+                      Center(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.6,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 6),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                
+                                  children: const [
+                                    Icon(Icons.check_circle_sharp,color: Colors.white,),
+                                    Icon(Icons.check_circle_sharp,color: Colors.white,),
+                                    Icon(Icons.circle,color: Colors.white,),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text("Step 1", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 2", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 3", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Center(
+                        child: SizedBox(
+                          height: 40,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset("assets/line.svg",color: Colors.white,width: MediaQuery.of(context).size.width*0.53,),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height*0.035,
+                  ),
+                  Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                      // ignore: prefer_const_literals_to_create_immutables
                      children: [
@@ -119,6 +198,7 @@ class _BodyState extends State<Three> {
                       )
                      ], 
                     ),
+                 
                   SizedBox(
                     height: MediaQuery.of(context).size.height*0.01,
                   ),
@@ -128,7 +208,6 @@ class _BodyState extends State<Three> {
                           
                           children: [
                             Column(
-                              
                               children: [
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -879,6 +958,59 @@ class _BodyState extends State<Three> {
                           ],
                         ),
                       ),
+                      Spacer(),
+                      Row(
+                              children: [
+                               Expanded(
+                                    child: SizedBox(
+                                      height: 48,
+                                      child:
+                                        OutlinedButton(
+                                          style: OutlinedButton.styleFrom(
+                                            minimumSize: Size.fromHeight(60),
+                                            side: BorderSide(width: 1,color: Colors.white),
+                                            shape: StadiumBorder(),
+                                          ),
+                                          onPressed: () {
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => StepTwoprop()));
+                                              }, 
+                                          child: Text("Cancel",style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500)
+                                          ),
+                                        ),
+                                    ),
+                                  ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width*0.04,
+                                ),
+                                 Expanded(
+                                  child: SizedBox(
+                                    height: 48,
+                                    child: ElevatedButton(
+                                        style: 
+                                        ElevatedButton.styleFrom(
+                                          minimumSize: Size.fromHeight(60),
+                                          // side: BorderSide(width: 2,),
+                                          shape: StadiumBorder(),
+                                          primary: Colors.white,
+                                          onSurface: Colors.white,
+                                        
+                                        ),
+                                        onPressed:() {
+                                              // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
+                                            },
+                                            child: Text("Next",style: TextStyle(
+                                        color: Color.fromARGB(255, 32, 9, 99),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500 )),
+                                        ),
+                                    ),
+                                ),
+                                  
+                              ],
+                            ),
                   
                   
                 ],
