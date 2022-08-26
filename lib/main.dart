@@ -31,7 +31,7 @@ import 'package:funku/verify_login.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'step2',
+    initialRoute: 'login',
     routes: {
       'login': (context) => FirstScreen(),
       'signup': (context) => SignUp(),
