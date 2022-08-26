@@ -32,10 +32,9 @@ class _BodyState extends State<Promoter> {
   String? valuecity;
   final itemsState = ['state 1','state 2','state 3','state 4'];
   String? valueState;
-  bool? _listTileCheckbox = false;
+  bool boxvalue =false;
   @override
   Widget build(BuildContext context) {
-    var listTileCheckBox;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -169,15 +168,169 @@ class _BodyState extends State<Promoter> {
                             ],
                           ),
                             SizedBox(
-                               height: MediaQuery.of(context).size.height*0.05,
+                               height: MediaQuery.of(context).size.height*0.04,
                             ),
-                           Row(
-                             children: [
-                               MyCheckBox(listTileCheckBox: _listTileCheckbox,),
-                               MyCheckBox(listTileCheckBox: _listTileCheckbox,),
-                             ],
-                           ),
-                           MyCheckBox(listTileCheckBox: _listTileCheckbox,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text("Payment Accepted", style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.white
+                                  )
+                                )
+                              ], 
+                            ),
+                            SizedBox(
+                               height: MediaQuery.of(context).size.height*0.02,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                  SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                  SizedBox(
+                                    width:  MediaQuery.of(context).size.width*0.3,
+                                    child: Text("Credit Card", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width*0.05,
+                                ),
+                                SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                   SizedBox(
+                                    child: Text("Debit Card", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                              ],
+                            ),
+                            SizedBox(
+                               height: MediaQuery.of(context).size.height*0.01,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                  SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                  SizedBox(
+                                    width:  MediaQuery.of(context).size.width*0.3,
+                                    child: Text("UPI", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width*0.05,
+                                ),
+                                SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                   SizedBox(
+                                    child: Text("Cash", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                              ],
+                            ),
+                            SizedBox(
+                               height: MediaQuery.of(context).size.height*0.01,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                  SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                  SizedBox(
+                                    width:  MediaQuery.of(context).size.width*0.3,
+                                    child: Text("Bank Transfer", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width*0.05,
+                                ),
+                                SizedBox(
+                                    height: 20,
+                                    width:  MediaQuery.of(context).size.width*0.1,
+                                    child: Checkbox(
+                                      value: boxvalue, onChanged: (newValue) {
+                                        setState(() {
+                                          boxvalue=newValue!;
+                                        });
+                                      },checkColor: Colors.black,activeColor: Colors.white,
+                                      ),
+                                  ),
+                                   SizedBox(
+                                    child: Text("PayPal", style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white
+                                      )
+                                    ),
+                                  ),
+                              ],
+                            ),
                             SizedBox(
                                height: MediaQuery.of(context).size.height*0.05,
                             ),

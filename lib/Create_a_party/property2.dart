@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class StepTwoprop extends StatefulWidget {
   const StepTwoprop({ Key? key }) : super(key: key);
@@ -49,6 +48,27 @@ class _BodyState extends State<Step> {
                 child: Column(
                   children: [
                     Row(
+                      children: [
+                        Icon(
+                                  Icons.add_box_rounded,
+                                  size:20,
+                                  color: Colors.white54,
+                                ),
+                                Icon(
+                                  Icons.delete
+                                ),
+                         Divider(
+                          thickness: 20,
+                         ),
+                         Icon(
+                                  Icons.add_box_rounded,
+                                  size:20,
+                                  color: Colors.white54,
+                                ),
+
+                      ],
+                    ),
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                      children: [
                        Text("Exterior images of place", style: TextStyle(
@@ -96,7 +116,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Instagram", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -105,7 +125,7 @@ class _BodyState extends State<Step> {
                           ],
                         ),
                         SizedBox(
-                          width: MediaQuery.of(context).size.height*0.02,
+                          width: MediaQuery.of(context).size.width*0.03,
                         ),
                         Column(
                           children: [
@@ -122,7 +142,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Facebook", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -131,7 +151,7 @@ class _BodyState extends State<Step> {
                           ],
                         ),
                         SizedBox(
-                          width: MediaQuery.of(context).size.height*0.02,
+                          width: MediaQuery.of(context).size.width*0.03,
                         ),
                         Column(
                           children: [
@@ -148,7 +168,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Gallery", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -209,7 +229,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Instagram", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -218,7 +238,7 @@ class _BodyState extends State<Step> {
                           ],
                         ),
                         SizedBox(
-                          width: MediaQuery.of(context).size.height*0.02,
+                          width: MediaQuery.of(context).size.width*0.03,
                         ),
                         Column(
                           children: [
@@ -235,7 +255,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Facebook", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -244,7 +264,7 @@ class _BodyState extends State<Step> {
                           ],
                         ),
                         SizedBox(
-                          width: MediaQuery.of(context).size.height*0.02,
+                          width: MediaQuery.of(context).size.width*0.03,
                         ),
                         Column(
                           children: [
@@ -261,7 +281,7 @@ class _BodyState extends State<Step> {
                               children: [
                                 Text("Gallery", style: TextStyle(
                          fontSize: 12,
-                         fontWeight: FontWeight.w300,
+                         fontWeight: FontWeight.w400,
                          color: Colors.white
                         )
                       )
@@ -270,9 +290,229 @@ class _BodyState extends State<Step> {
                           ],
                         ),
                       ],
-                    )
-                    
-                    
+                    ),
+                    SizedBox(
+                          height: MediaQuery.of(context).size.height*0.03,
+                        ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       Text("Menu of place", style: TextStyle(
+                         fontSize: 14,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                     ], 
+                    ),
+                    SizedBox(
+                          height: MediaQuery.of(context).size.height*0.01,
+                        ),
+                    Row(
+                                children: [
+                                  Icon(
+                                    Icons.add_box_rounded,
+                                    size:80,
+                                    color: Colors.white54,
+                                  ),
+                                ],
+                              ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.002,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       Text("Connect Social Media", style: TextStyle(
+                         fontSize: 14,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                     ], 
+                     
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.007,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Instagram", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*0.03,
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Youtube", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*0.03,
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Facebook", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*0.03,
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Twitter", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.03,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       Text("Add Promoter", style: TextStyle(
+                         fontSize: 14,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                     ], 
+                     
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.007,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Add", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*0.03,
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add_box_rounded,
+                                  size:50,
+                                  color: Colors.white54,
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text("Add", style: TextStyle(
+                         fontSize: 12,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 
                 ),
