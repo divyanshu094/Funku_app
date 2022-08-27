@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:funku/Create_a_party/Property1.dart';
 import 'package:funku/Create_a_party/add_property1.dart';
 import 'package:funku/Create_a_party/property2.dart';
+import 'package:funku/add_artist/artist1.dart';
 import 'package:funku/add_promoter/promoter1.dart';
 import 'package:funku/choose_an_avatar.dart';
 import 'package:funku/complited.dart';
@@ -33,7 +34,7 @@ import 'Create_a_party/property3.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'step2',
+    initialRoute: 'propAdd',
     routes: {
       'login': (context) => FirstScreen(),
       'signup': (context) => SignUp(),
@@ -59,7 +60,7 @@ void main() {
       'pyCmp': (context) => PaymentComplete(),
       'propAdd': (context) => PropertyAdd(),
       'promoter': (context) => PromoterAdd(),
-      'step2': (context) => PropertyThree()
+      'step2': (context) => ArtistAdd()
     },
   ));
 }
