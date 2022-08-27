@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:funku/Create_a_party/property2.dart';
 import 'package:funku/add_artist/artist1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,7 +69,7 @@ class _BodyState extends State<PropAd> {
                        children: [
                          Text("Add a Property", style: GoogleFonts.merriweather(
                            fontSize: 24,
-                           fontWeight: FontWeight.bold,
+                           fontWeight: FontWeight.w400,
                            color: Colors.white
                           )
                         )
@@ -573,7 +574,7 @@ class _BodyState extends State<PropAd> {
                                         
                                         ),
                                         onPressed:() {
-                                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => StepTwoprop()));
                                             },
                                             child: Text("Next",style: TextStyle(
                                         color: Color.fromARGB(255, 32, 9, 99),

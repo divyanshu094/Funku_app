@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:funku/Create_a_party/property2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../add_artist/artist1.dart';
+
 bool _click1 = false;
  Color _containerColortop1 = Colors.white30;
  Color _containerColorbottom1 = Colors.white10;
@@ -114,7 +116,7 @@ class _BodyState extends State<Three> {
                        children: [
                          Text("Add a Property", style: GoogleFonts.merriweather(
                            fontSize: 24,
-                           fontWeight: FontWeight.bold,
+                           fontWeight: FontWeight.w400,
                            color: Colors.white
                           )
                         )
@@ -999,7 +1001,7 @@ class _BodyState extends State<Three> {
                                         
                                         ),
                                         onPressed:() {
-                                              // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
+                                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
                                             },
                                             child: Text("Next",style: TextStyle(
                                         color: Color.fromARGB(255, 32, 9, 99),

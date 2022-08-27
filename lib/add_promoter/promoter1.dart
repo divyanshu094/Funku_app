@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:funku/add_artist/artist1.dart';
+import 'package:funku/add_promoter/promoter2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PromoterAdd extends StatefulWidget {
@@ -53,8 +55,7 @@ class _BodyState extends State<Promoter> {
         ),
         body: 
               Padding(padding: const EdgeInsets.only(left: 28, right: 28,bottom: 28),
-              child:SingleChildScrollView(
-                child: 
+              child: 
                   Column(
                     children: [
                       Row(
@@ -62,7 +63,7 @@ class _BodyState extends State<Promoter> {
                        children: [
                          Text("Add a Promoter", style: GoogleFonts.merriweather(
                            fontSize: 24,
-                           fontWeight: FontWeight.bold,
+                           fontWeight: FontWeight.w400,
                            color: Colors.white
                           )
                         )
@@ -70,7 +71,63 @@ class _BodyState extends State<Promoter> {
                        
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height*0.04,
+                        height: MediaQuery.of(context).size.height*0.023,
+                      ),
+                      Stack(
+                    children: [
+                      Center(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.6,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 6),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                
+                                  children: const [
+                                    Icon(Icons.circle,color: Colors.white,),
+                                    Icon(Icons.circle,color: Colors.white60,),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text("Step 1", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 2", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Center(
+                        child: SizedBox(
+                          height: 40,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset("assets/line.svg",color: Colors.white,width: MediaQuery.of(context).size.width*0.53,),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height*0.03,
                       ),
                       
                       Icon(
@@ -334,6 +391,7 @@ class _BodyState extends State<Promoter> {
                             SizedBox(
                                height: MediaQuery.of(context).size.height*0.05,
                             ),
+                            Spacer(),
                             Row(
                               children: [
                                Expanded(
@@ -347,7 +405,7 @@ class _BodyState extends State<Promoter> {
                                             shape: StadiumBorder(),
                                           ),
                                           onPressed: () {
-                                                // Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUp()));
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
                                               }, 
                                           child: Text("Cancel",style: TextStyle(
                                             color: Colors.white,
@@ -374,7 +432,7 @@ class _BodyState extends State<Promoter> {
                                         
                                         ),
                                         onPressed:() {
-                                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ArtistAdd()));
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => PromoterTwo()));
                                             },
                                             child: Text("Next",style: TextStyle(
                                         color: Color.fromARGB(255, 32, 9, 99),
@@ -389,7 +447,6 @@ class _BodyState extends State<Promoter> {
                     ],
                   
                   ),
-              )
             
         ),
             ),
@@ -402,44 +459,4 @@ class _BodyState extends State<Promoter> {
           style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14),
         ),
       );
-}
-class MyCheckBox extends StatefulWidget {
-  MyCheckBox({Key? key, required this.listTileCheckBox}) : super(key: key);
-  bool? listTileCheckBox; //To access this variable we use widget. in state class below
-
-  @override
-  State<MyCheckBox> createState() => _MyCheckBoxState();
-}
-
-class _MyCheckBoxState extends State<MyCheckBox> {
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      //Use Align so that our Container does not get all width as it happens in ListView
-      alignment: Alignment.centerLeft,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0),
-          color: Colors.transparent,
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Checkbox(
-              checkColor: Colors.green,
-              activeColor: Colors.white,
-              value: widget.listTileCheckBox,
-              onChanged: (val) {
-                setState(() => widget.listTileCheckBox = val);
-              },
-            ),
-            const Padding(
-              padding: EdgeInsets.only(right: 15.0),
-              child: Text("Top Product"),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }

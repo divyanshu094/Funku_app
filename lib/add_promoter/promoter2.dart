@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:funku/Create_a_party/Property1.dart';
+import 'package:funku/add_promoter/promoter1.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PromoterTwo extends StatefulWidget {
   const PromoterTwo({ Key? key }) : super(key: key);
@@ -51,6 +55,77 @@ class _BodyState extends State<Step2> {
               child:SingleChildScrollView(
                 child: Column(
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       Text("Add an Promoter", style: GoogleFonts.merriweather(
+                         fontSize: 24,
+                         fontWeight: FontWeight.w400,
+                         color: Colors.white
+                        )
+                      )
+                     ], 
+                     
+                    ),
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height*0.023,
+                      ),
+                      Stack(
+                    children: [
+                      Center(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.6,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 6),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                
+                                  children: const [
+                                    Icon(Icons.check_circle_sharp,color: Colors.white,),
+                                    Icon(Icons.circle,color: Colors.white,),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text("Step 1", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                  Text("Step 2", style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white
+                                    )
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Center(
+                        child: SizedBox(
+                          height: 40,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset("assets/line.svg",color: Colors.white,width: MediaQuery.of(context).size.width*0.53,),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height*0.03,
+                    ),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                        children: [
@@ -549,6 +624,61 @@ class _BodyState extends State<Step2> {
                                     ),
                                 ],
                               ),
+                              SizedBox(
+                               height: MediaQuery.of(context).size.height*0.025,
+                            ),
+                            Row(
+                              children: [
+                               Expanded(
+                                    child: SizedBox(
+                                      height: 48,
+                                      child:
+                                        OutlinedButton(
+                                          style: OutlinedButton.styleFrom(
+                                            minimumSize: Size.fromHeight(60),
+                                            side: BorderSide(width: 1,color: Colors.white),
+                                            shape: StadiumBorder(),
+                                          ),
+                                          onPressed: () {
+                                                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => PromoterAdd()));
+                                              }, 
+                                          child: Text("Cancel",style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500)
+                                          ),
+                                        ),
+                                    ),
+                                  ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width*0.04,
+                                ),
+                                 Expanded(
+                                  child: SizedBox(
+                                    height: 48,
+                                    child: ElevatedButton(
+                                        style: 
+                                        ElevatedButton.styleFrom(
+                                          minimumSize: Size.fromHeight(60),
+                                          // side: BorderSide(width: 2,),
+                                          shape: StadiumBorder(),
+                                          primary: Colors.white,
+                                          onSurface: Colors.white,
+                                        
+                                        ),
+                                        onPressed:() {
+                                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => PropertyAdd()));
+                                            },
+                                            child: Text("Next",style: TextStyle(
+                                        color: Color.fromARGB(255, 32, 9, 99),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500 )),
+                                        ),
+                                    ),
+                                ),
+                                  
+                              ],
+                            ),
                   ],
                 
                 ),

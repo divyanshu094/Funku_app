@@ -56,7 +56,7 @@ class _BodyState extends State<Step> {
                        children: [
                          Text("Add a Property", style: GoogleFonts.merriweather(
                            fontSize: 24,
-                           fontWeight: FontWeight.bold,
+                           fontWeight: FontWeight.w400,
                            color: Colors.white
                           )
                         )
