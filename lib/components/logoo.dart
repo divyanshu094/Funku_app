@@ -53,3 +53,39 @@ class GenderIcon extends StatelessWidget {
     );
   }
 }
+
+
+
+//====================================================================================================================================================
+
+
+class DashboardIcons extends StatelessWidget {
+  final String? iconSrc;
+  final Function? press;
+  const DashboardIcons({
+    Key? key,
+    this.iconSrc,
+    this.press,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: press as void Function()?,
+      child: Container(
+        // margin: const EdgeInsets.symmetric(horizontal: 10),
+        // padding: const EdgeInsets.all(0),
+        decoration: BoxDecoration(
+           
+          // shape: BoxShape.circle,
+          // color: Colors.white70,
+        ),
+        child: SvgPicture.asset(
+          iconSrc!,
+          // height: 50,
+          // width: 50,
+        ),
+      ),
+    );
+  }
+}

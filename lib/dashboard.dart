@@ -1,14 +1,18 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:funku/components/logoo.dart';
 import 'package:funku/contact_us.dart';
 import 'package:funku/genre.dart';
 import 'package:funku/notification.dart';
+import 'package:funku/pd_birthday.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:swipe_cards/draggable_card.dart';
 import 'package:swipe_cards/swipe_cards.dart';
 
+import 'Create_a_party/Property1.dart';
 import 'content.dart';
+import 'payment/payment_completed.dart';
 // import 'package:funku/a.dart';
 class MyApp extends StatefulWidget {
   const MyApp({ Key? key }) : super(key: key);
@@ -96,66 +100,102 @@ class _MyHomePageState extends State<MyHomePage> {
     _matchEngine = MatchEngine(swipeItems: _swipeItems);
     super.initState();
   }
+  double xoffset=0;
+  double yoffset=0;
+  double scaleFactor =1;
+  bool isDrawerOpen = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Container(
+      body: AnimatedContainer(
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
           image: AssetImage('assets/bg.png'),
           fit: BoxFit.fill,
-        )),
+        ),
+        borderRadius: BorderRadius.circular(isDrawerOpen? 40:0)
+        ),
+        transform: Matrix4.translationValues(xoffset, yoffset, 10)..scale(scaleFactor)..rotateY(isDrawerOpen? 0.2:0),  
+      duration: Duration(milliseconds: 250),
         child: SafeArea(
           child: ListView(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(left: 20,right: 20,top: 10),
+                padding: const EdgeInsets.only(left: 1,right: 1,top: 10,bottom: 0),
                 child: Row(
                   children:  <Widget>[
-                    IconButton(onPressed: () {
-                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationToday()));
-                    }, icon:  Icon(
-                      Icons.compass_calibration,
-                      color: Colors.white,
-                      
-                    ),),
+                    DashboardIcons(
+                      iconSrc: "assets/icons/group2.svg",
+                          press: () {
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => PropertyAdd()));
+                          },
+                    ),
+                    
                    
                     Spacer(),
-                    IconButton(onPressed: () {
-                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactUs()));
-                    }, icon:  Icon(
-                      Icons.compass_calibration,
-                      color: Colors.white,
-                      
-                    ),),
-                    SizedBox(
-                      width: 15,
+                    DashboardIcons(
+                      iconSrc: "assets/icons/group.svg",
+                          press: () {
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactUs()));
+                          },
                     ),
-                    IconButton(onPressed: () {
-                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => MusicGenre()));
-                    }, icon:  Icon(
-                      Icons.compass_calibration,
-                      color: Colors.white,
-                      
-                    ),),
+                    DashboardIcons(
+                      iconSrc: "assets/icons/group6.svg",
+                          press: () {
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationToday()));
+                          },
+                    ),
+                    DashboardIcons(
+                      iconSrc: "assets/icons/group7.svg",
+                          press: () {
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentComplete()));
+                          },
+                    ),
                   ],
                 ),
+                
               ),
-              Padding(
-                padding: EdgeInsets.all(25),
-                child: Text(
-                  'Find the best party for you',
-                  style: GoogleFonts.merriweather(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                       color: Colors.white,
-                       fontStyle: FontStyle.italic
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  isDrawerOpen?IconButton(
+                    onPressed: (){
+                      setState(() {
+                        xoffset=0;
+                        yoffset =0;
+                        scaleFactor=1;
+                        isDrawerOpen =false;
+                      });
+                    }, 
+                    icon: Icon(Icons.arrow_back_ios )):
+                  IconButton(
+                    onPressed: (){
+                      setState(() {
+                        xoffset=-210;
+                        yoffset =100;
+                        scaleFactor=0.8;
+                        isDrawerOpen =true;
+                      });
+                    }, 
+                    icon: Icon(Icons.menu)
                   ),
-                ),
+                ],
               ),
+              // Padding(
+              //   padding: EdgeInsets.all(25),
+              //   child: Text(
+              //     'Find the best party for you',
+              //     style: GoogleFonts.merriweather(
+              //       fontSize: 20,
+              //       fontWeight: FontWeight.normal,
+              //          color: Colors.white,
+              //          fontStyle: FontStyle.italic
+              //     ),
+              //   ),
+              // ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -163,7 +203,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 80,
                   child: Row(
                     children: [
-                      addStory(),
+                      // addStory(),
+                      userStory(),
+                      userStory(),
                       userStory(),
                       userStory(),
                       userStory(),
@@ -186,15 +228,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     eventDeal(),
                     SizedBox(
-                      width: 15,
+                      width: 20,
                     ),
                     eventDeal(),
                     SizedBox(
-                      width: 15,
+                      width: 20,
                     ),
                     eventDeal(),
                     SizedBox(
-                      width: 15,
+                      width: 20,
                     ),
                     eventDeal()
                   ],

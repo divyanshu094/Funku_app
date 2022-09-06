@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:funku/dashboard.dart';
 import 'package:funku/preference/drink.dart';
 import 'package:funku/preference_drink.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../dashboard/stackj_screen.dart';
 
 bool _click1 = false;
  Color _containerColortop1 = Colors.white30;
@@ -806,7 +809,7 @@ class _AmbienceState extends State<Ambience> {
                             primary: Colors.white,
                           ),
                           onPressed: (){
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => DrinkGenre()));
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => ScreenStack()));
                           }, 
                           child: const Text('Next',style: TextStyle(
                 color: Color.fromARGB(255, 32, 9, 99),

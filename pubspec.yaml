@@ -75,6 +75,7 @@ flutter:
     - assets/drink/
     - assets/preference/
     - assets/payment/
+    - assets/icons/
 
   #   - images/a_dot_ham.jpeg
 

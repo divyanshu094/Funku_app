@@ -11,6 +11,8 @@ import 'package:funku/complited.dart';
 import 'package:funku/components/components/variables.dart';
 import 'package:funku/contact_us.dart';
 import 'package:funku/dashboard.dart';
+import 'package:funku/dashboard/home.dart';
+import 'package:funku/dashboard/stackj_screen.dart';
 import 'package:funku/first_page.dart';
 import 'package:funku/genre.dart';
 import 'package:funku/login.dart';
@@ -34,7 +36,7 @@ import 'Create_a_party/property3.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'propAdd',
+    initialRoute: 'login',
     routes: {
       'login': (context) => FirstScreen(),
       'signup': (context) => SignUp(),
@@ -50,6 +52,7 @@ void main() {
       'contact': (context) => ContactUs(),
       'preference': (context) => PreferDrink(),
       'dashboard': (context) => MyApp(),
+      'footer':(context) =>  Home1(),
       'notification': (context) => NotificationToday(),
       'genure': (context) => MusicGenre(),
       'test': (context) => HomePage(),
@@ -60,7 +63,8 @@ void main() {
       'pyCmp': (context) => PaymentComplete(),
       'propAdd': (context) => PropertyAdd(),
       'promoter': (context) => PromoterAdd(),
-      'step2': (context) => ArtistAdd()
+      'step2': (context) => ArtistAdd(),
+      'stack':(context) => ScreenStack()
     },
   ));
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:funku/Create_a_party/property2.dart';
 import 'package:funku/add_artist/artist1.dart';
+import 'package:funku/dashboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PropertyAdd extends StatefulWidget {
@@ -54,7 +55,7 @@ class _BodyState extends State<PropAd> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           leading: IconButton(onPressed: () {
-            // Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUp()));
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyApp()));
           },icon: Icon(Icons.arrow_back_ios_outlined)),
           elevation: 0,
         ),

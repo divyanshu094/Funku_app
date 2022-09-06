@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:funku/dashboard.dart';
+import 'package:funku/genre.dart';
 import 'package:funku/persionaldetails.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:row_date_picker/row_date_picker.dart';
@@ -223,7 +223,7 @@ class _PdBirthdayState extends State<PdBirthday> {
                               primary: Colors.white,
                             ),
                             onPressed: (){
-                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyApp()));
+                               Navigator.of(context).push(MaterialPageRoute(builder: (context) => MusicGenre()));
                             }, 
                             child: const Text('Next',style: TextStyle(
                   color: Color.fromARGB(255, 32, 9, 99),

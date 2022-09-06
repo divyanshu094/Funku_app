@@ -67,7 +67,89 @@
               SizedBox(
                         height: 33,
                       ),
-                      RichText(
+                      
+                    
+                      SizedBox(
+                        height: 48,
+                        child: ElevatedButton(
+                          
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size.fromHeight(60),
+                            side: BorderSide(width: 2,color: Colors.white),
+                            shape: StadiumBorder(),
+                            primary: Colors.white,
+                            
+                          ),
+                        
+                          onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => LogIn()));
+                              }, child: Text("Login",style: TextStyle(
+                  color: Color.fromARGB(255, 32, 9, 99),
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold )),),
+                      ),
+
+                      SizedBox(
+                        height: 15,
+                      ),
+
+                      SizedBox(
+                        height: 48,
+                        child:
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              minimumSize: Size.fromHeight(60),
+                              side: BorderSide(width: 2,color: Colors.white),
+                              shape: StadiumBorder(),
+                            ),
+                            onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUp()));
+                                }, child: Text("Signup",style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold)),),
+                        
+                      ),
+
+                      SizedBox(
+                        height: 18,
+                      ),
+
+                    Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                      Text("or", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  
+                ),),
+                ],
+              ),  
+              SizedBox(
+                        height: 18,
+                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        SocalIcon(
+                          iconSrc: "assets/combinedShape4.svg",
+                          press: () {},
+                        ),
+                        SocalIcon(
+                          iconSrc: "assets/combinedShape3.svg",
+                          press: () {},
+                        ),
+                        SocalIcon(
+                          iconSrc: "assets/combinedShape2.svg",
+                          press: () {},
+                        )
+                        
+                      ],
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    RichText(
                 text: TextSpan(
                     text: 'By proceeding, you agree to our ',
                     style: const TextStyle(
@@ -117,91 +199,6 @@
                     ]),
               ),
                       ),
-
-                    
-              
-              
-                SizedBox(
-                        height: 20,
-                      ),
-                    
-                      SizedBox(
-                        height: 48,
-                        child: ElevatedButton(
-                          
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: Size.fromHeight(60),
-                            side: BorderSide(width: 2,color: Colors.white),
-                            shape: StadiumBorder(),
-                            primary: Colors.white,
-                            
-                          ),
-                        
-                          onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => LogIn()));
-                              }, child: Text("Login",style: TextStyle(
-                  color: Color.fromARGB(255, 32, 9, 99),
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold )),),
-                      ),
-
-                      SizedBox(
-                        height: 15,
-                      ),
-
-                      SizedBox(
-                        height: 48,
-                        child:
-                          OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                              minimumSize: Size.fromHeight(60),
-                              side: BorderSide(width: 2,color: Colors.white),
-                              shape: StadiumBorder(),
-                            ),
-                            onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUp()));
-                                }, child: Text("Signup",style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold)),),
-                        
-                      ),
-
-                      SizedBox(
-                        height: 19,
-                      ),
-
-                    Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                      Text("or", style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  
-                ),),
-                ],
-              ),  
-              SizedBox(
-                        height: 19,
-                      ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        SocalIcon(
-                          iconSrc: "assets/combinedShape4.svg",
-                          press: () {},
-                        ),
-                        SocalIcon(
-                          iconSrc: "assets/combinedShape3.svg",
-                          press: () {},
-                        ),
-                        SocalIcon(
-                          iconSrc: "assets/combinedShape2.svg",
-                          press: () {},
-                        )
-                        
-                      ],
-                    )
                     ],
                   ),
                 ),

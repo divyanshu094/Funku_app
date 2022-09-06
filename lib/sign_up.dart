@@ -128,7 +128,7 @@ class _BodyState extends State<Body> {
                       ),
                       SizedBox(
                         height: 58,
-                        width:  MediaQuery.of(context).size.width*0.71,
+                        width:  MediaQuery.of(context).size.width*0.68,
                         child: TextFormField(
                         style: TextStyle( color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20 ),
                         keyboardType: TextInputType.number,
