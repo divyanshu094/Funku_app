@@ -1,0 +1,23 @@
+<svg width="78" height="78" viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="25.228%" y1="0%" x2="71.755%" y2="100%" id="aucgxa5f0c">
+            <stop stop-color="#FFF" stop-opacity=".6" offset="0%"/>
+            <stop stop-color="#FFF" stop-opacity=".2" offset="100%"/>
+        </linearGradient>
+        <filter x="-110.9%" y="-104.7%" width="321.9%" height="321.9%" filterUnits="objectBoundingBox" id="n1x9wtcs0a">
+            <feMorphology radius=".5" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1"/>
+        </filter>
+        <rect id="c60i9awk0b" x="0" y="0" width="32" height="32" rx="16"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(23 21)">
+            <use fill="#000" filter="url(#n1x9wtcs0a)" xlink:href="#c60i9awk0b"/>
+            <use fill="url(#aucgxa5f0c)" xlink:href="#c60i9awk0b"/>
+        </g>
+        <path d="M45.36 40.83a.702.702 0 0 0-.542.82.713.713 0 0 1-.144.58.66.66 0 0 1-.522.254H33.861a.66.66 0 0 1-.521-.254.713.713 0 0 1-.145-.58c.192-1.064.578-1.764.951-2.44.453-.823.922-1.673.922-2.983v-1.055c0-2.217 1.738-4.046 3.874-4.078h.129c2.13.032 3.861 1.86 3.861 4.078v1.055c0 1.115.352 1.882.682 2.514a.674.674 0 0 0 .597.369c.108 0 .22-.028.322-.085a.717.717 0 0 0 .273-.953c-.328-.629-.518-1.132-.518-1.845v-1.055c0-1.447-.54-2.814-1.522-3.849a5.169 5.169 0 0 0-3.088-1.592v-1.028A.69.69 0 0 0 39 28a.69.69 0 0 0-.678.703v1.03c-2.592.349-4.61 2.668-4.61 5.439v1.055c0 .936-.328 1.531-.743 2.284-.41.742-.873 1.583-1.107 2.88-.112.62.046 1.253.434 1.738a2 2 0 0 0 1.565.762h3.118c0 1.163.913 2.109 2.034 2.109 1.122 0 2.034-.946 2.034-2.11h3.105a2 2 0 0 0 1.565-.761 2.162 2.162 0 0 0 .434-1.738.68.68 0 0 0-.791-.561zm-6.347 3.764a.692.692 0 0 1-.678-.703h1.356a.692.692 0 0 1-.678.703zm-7.335-8.719a.69.69 0 0 1-.678-.703 8.46 8.46 0 0 1 2.038-5.532.661.661 0 0 1 .957-.055.722.722 0 0 1 .053.993 7.025 7.025 0 0 0-1.692 4.594.69.69 0 0 1-.678.703zM47 35.172a.69.69 0 0 1-.678.703.69.69 0 0 1-.678-.703c0-1.698-.6-3.33-1.692-4.594a.722.722 0 0 1 .053-.993.661.661 0 0 1 .957.055A8.46 8.46 0 0 1 47 35.172z" fill="#FFF" fill-rule="nonzero"/>
+    </g>
+</svg>

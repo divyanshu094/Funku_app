@@ -13,9 +13,11 @@ import 'package:swipe_cards/swipe_cards.dart';
 import 'Create_a_party/Property1.dart';
 import 'content.dart';
 import 'payment/payment_completed.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
+
 // import 'package:funku/a.dart';
 class MyApp extends StatefulWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -32,8 +34,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -74,24 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
     for (int i = 0; i < _names.length; i++) {
       _swipeItems.add(SwipeItem(
           content: Content(text: _names[i], color: _colors[i]),
-          likeAction: () {
-            _scaffoldKey.currentState?.showSnackBar(SnackBar(
-              content: Text("Liked ${_names[i]}"),
-              duration: Duration(milliseconds: 500),
-            ));
-          },
-          nopeAction: () {
-            _scaffoldKey.currentState?.showSnackBar(SnackBar(
-              content: Text("Nope ${_names[i]}"),
-              duration: Duration(milliseconds: 500),
-            ));
-          },
-          superlikeAction: () {
-            _scaffoldKey.currentState?.showSnackBar(SnackBar(
-              content: Text("Superliked ${_names[i]}"),
-              duration: Duration(milliseconds: 500),
-            ));
-          },
+          likeAction: () {},
+          nopeAction: () {},
+          superlikeAction: () {},
           onSlideUpdate: (SlideRegion? region) async {
             print("Region $region");
           }));
@@ -100,10 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
     _matchEngine = MatchEngine(swipeItems: _swipeItems);
     super.initState();
   }
-  double xoffset=0;
-  double yoffset=0;
-  double scaleFactor =1;
+
+  double xoffset = 0;
+  double yoffset = 0;
+  double scaleFactor = 1;
   bool isDrawerOpen = false;
+  bool _visible = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,76 +99,79 @@ class _MyHomePageState extends State<MyHomePage> {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('assets/bg.png'),
-          fit: BoxFit.fill,
-        ),
-        borderRadius: BorderRadius.circular(isDrawerOpen? 40:0)
-        ),
-        transform: Matrix4.translationValues(xoffset, yoffset, 10)..scale(scaleFactor)..rotateY(isDrawerOpen? 0.2:0),  
-      duration: Duration(milliseconds: 250),
-        child: SafeArea(
+              image: AssetImage('assets/bg.png'),
+              fit: BoxFit.fill,
+            ),
+            borderRadius: BorderRadius.circular(isDrawerOpen ? 40 : 0)),
+        transform: Matrix4.translationValues(xoffset, yoffset, 10)
+          ..scale(scaleFactor)
+          ..rotateY(isDrawerOpen ? 0.2 : 0),
+        duration: Duration(milliseconds: 250),
+        child: SingleChildScrollView(
           child: ListView(
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(left: 1,right: 1,top: 10,bottom: 0),
+                padding: const EdgeInsets.only(
+                    left: 1, right: 1, top: 10, bottom: 0),
                 child: Row(
-                  children:  <Widget>[
+                  children: <Widget>[
                     DashboardIcons(
                       iconSrc: "assets/icons/group2.svg",
-                          press: () {
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => PropertyAdd()));
-                          },
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PropertyAdd()));
+                      },
                     ),
-                    
-                   
                     Spacer(),
                     DashboardIcons(
                       iconSrc: "assets/icons/group.svg",
-                          press: () {
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => ContactUs()));
-                          },
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ContactUs()));
+                      },
                     ),
                     DashboardIcons(
                       iconSrc: "assets/icons/group6.svg",
-                          press: () {
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationToday()));
-                          },
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => NotificationToday()));
+                      },
                     ),
                     DashboardIcons(
                       iconSrc: "assets/icons/group7.svg",
-                          press: () {
-                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => PaymentComplete()));
-                          },
+                      press: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PaymentComplete()));
+                      },
                     ),
                   ],
                 ),
-                
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  isDrawerOpen?IconButton(
-                    onPressed: (){
-                      setState(() {
-                        xoffset=0;
-                        yoffset =0;
-                        scaleFactor=1;
-                        isDrawerOpen =false;
-                      });
-                    }, 
-                    icon: Icon(Icons.arrow_back_ios )):
-                  IconButton(
-                    onPressed: (){
-                      setState(() {
-                        xoffset=-210;
-                        yoffset =100;
-                        scaleFactor=0.8;
-                        isDrawerOpen =true;
-                      });
-                    }, 
-                    icon: Icon(Icons.menu)
-                  ),
+                  isDrawerOpen
+                      ? IconButton(
+                          onPressed: () {
+                            setState(() {
+                              xoffset = 0;
+                              yoffset = 0;
+                              scaleFactor = 1;
+                              isDrawerOpen = false;
+                            });
+                          },
+                          icon: Icon(Icons.arrow_back_ios))
+                      : IconButton(
+                          onPressed: () {
+                            setState(() {
+                              xoffset = -210;
+                              yoffset = 100;
+                              scaleFactor = 0.8;
+                              isDrawerOpen = true;
+                            });
+                          },
+                          icon: Icon(Icons.menu)),
                 ],
               ),
               // Padding(
@@ -196,6 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //     ),
               //   ),
               // ),
+
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -214,34 +205,50 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+              Swiper(
+                itemBuilder: (BuildContext context, int index) {
+                  return _renderContent(context);
+                },
+                itemWidth: 360,
+                itemHeight: 200,
+                itemCount: _names.length,
+                layout: SwiperLayout.STACK,
+                // control:SwiperControl(),
+              ),
               // addStory(),
               // userStory(),
               // bodyContainer(),
-              _swipe(),
+              Visibility(
+                  child: _swipe(),
+                  visible: _visible,
+                  replacement: SizedBox(
+                    height: 20,
+                  )),
+              // _swipe(),
               // _renderContent(context),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-              child: Container(
-                height: 120,
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    eventDeal(),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    eventDeal(),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    eventDeal(),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    eventDeal()
-                  ],
+                child: Container(
+                  height: 120,
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    children: [
+                      eventDeal(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      eventDeal(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      eventDeal(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      eventDeal()
+                    ],
+                  ),
                 ),
-              ),
               ),
               Padding(
                 padding: const EdgeInsets.all(25.0),
@@ -391,27 +398,27 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-  _swipe(){
+
+  _swipe() {
     return Container(
-              height: MediaQuery.of(context).size.height*0.26,
-              child: SwipeCards(
-                matchEngine: _matchEngine!,
-                itemBuilder: (BuildContext context, int index) {
-                  return _renderContent(context);
-                    
-                },
-                onStackFinished: () {
-                  _scaffoldKey.currentState!.showSnackBar(SnackBar(
-                    content: Text("Stack Finished"),
-                    duration: Duration(milliseconds: 500),
-                  ));
-                },
-                itemChanged: (SwipeItem item, int index) {
-                  print("item: ${item.content.text}, index: $index");
-                },
-                upSwipeAllowed: true,
-                fillSpace: true,
-              ),
+      height: MediaQuery.of(context).size.height * 0.26,
+      width: MediaQuery.of(context).size.height * 0.78,
+      child: SwipeCards(
+        matchEngine: _matchEngine!,
+        itemBuilder: (BuildContext context, int index) {
+          return _renderContent(context);
+        },
+        onStackFinished: () {
+          setState(() {
+            _visible = false;
+          });
+        },
+        itemChanged: (SwipeItem item, int index) {
+          print("item: ${item.content.text}, index: $index");
+        },
+        upSwipeAllowed: true,
+        fillSpace: true,
+      ),
     );
   }
 
@@ -780,7 +787,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 10,
               ),
               Row(
-                
                 children: [
                   Text(
                     "SinQ",
@@ -825,110 +831,117 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
- Widget discoverArtist() {
-    return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/temp.png'),
-          fit: BoxFit.fill,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(25)),
-      ),
-      height: 145,
-      width: 145,
-      child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-        Container(
-          width: 145,
-          height: 50,
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.3),
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(15),
-              topRight: Radius.circular(15),
-              bottomLeft: Radius.circular(25),
-              bottomRight: Radius.circular(25),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 12.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Text(
-                  'Guru Randhwa',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700),
-                ),
-                Text(
-                  'Bollywood & Punjabi',
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700),
-                ),
-              ],
-            ),
-          ),
-        )
-      ]),
-    );
-  }
 
- _renderContent(context) {
-    return Card(
-      elevation: 0.0,
-      margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 20),
-      color: Color(0x00000000),
-      child: FlipCard(
-        direction: FlipDirection.VERTICAL,
-        speed: 1000,
-        onFlipDone: (status) {
-          print(status);
-        },
-        front: Container(
-        
-        padding: EdgeInsets.only(left: 20),
-        height: 180,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            image: DecorationImage(
-              image: AssetImage('assets/temp.png'),
-              fit: BoxFit.fill,
-            )),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const <Widget>[
-            Text("Friday Night at SinQ ",
-                style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700)),
-            Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Text("Click to check details",
-                  style: TextStyle(fontSize: 15, color: Colors.grey)),
-            )
-          ],
-        )),
-        back: Container(
-          decoration: BoxDecoration(
-            color: Color(0xFF006666),
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+Widget discoverArtist() {
+  return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/temp.png'),
+        fit: BoxFit.fill,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(25)),
+    ),
+    height: 145,
+    width: 145,
+    child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+      Container(
+        width: 145,
+        height: 50,
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(0.3),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+            bottomLeft: Radius.circular(25),
+            bottomRight: Radius.circular(25),
           ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 12.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text('Back', style: Theme.of(context).textTheme.headline1),
-              Text('Click here to flip front',
-                  style: Theme.of(context).textTheme.bodyText1),
+              Text(
+                'Guru Randhwa',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700),
+              ),
+              Text(
+                'Bollywood & Punjabi',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700),
+              ),
             ],
           ),
         ),
+      )
+    ]),
+  );
+}
+
+_renderContent(context) {
+  return Card(
+    elevation: 0.0,
+    margin: EdgeInsets.only(left: 20.0, right: 30.0, top: 20.0, bottom: 20),
+    color: Color(0x00000000),
+    child: FlipCard(
+      direction: FlipDirection.VERTICAL,
+      speed: 1000,
+      onFlipDone: (status) {
+        print(status);
+      },
+      front: Container(
+          padding: EdgeInsets.only(left: 20),
+          height: 180,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              image: DecorationImage(
+                image: AssetImage('assets/temp.png'),
+                fit: BoxFit.fill,
+              )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const <Widget>[
+              Text("Friday Night at SinQ ",
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700)),
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text("Click to check details",
+                    style: TextStyle(fontSize: 15, color: Colors.grey)),
+              )
+            ],
+          )),
+      back: Container(
+        decoration: BoxDecoration(
+          color: Color(0xFF006666),
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Back', style: Theme.of(context).textTheme.headline1),
+            Text('Click here to flip front',
+                style: Theme.of(context).textTheme.bodyText1),
+          ],
+        ),
       ),
-    );
-  }
+    ),
+  );
+}
+
+Widget _buildSwiperList(BuildContext context, int index) {
+  return Container(
+      margin: EdgeInsets.only(left: 15, right: 15),
+      // height: DeviceSize.height(context) / 6,
+      child: _renderContent(context));
+}

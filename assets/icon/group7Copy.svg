@@ -1,0 +1,23 @@
+<svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="25.228%" y1="0%" x2="71.755%" y2="100%" id="u6dwb3091c">
+            <stop stop-color="#FFF" stop-opacity=".6" offset="0%"/>
+            <stop stop-color="#FFF" stop-opacity=".2" offset="100%"/>
+        </linearGradient>
+        <filter x="-221.9%" y="-209.4%" width="543.8%" height="543.8%" filterUnits="objectBoundingBox" id="xlejd1evaa">
+            <feMorphology radius=".5" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1"/>
+        </filter>
+        <rect id="orlgcvywkb" x="0" y="0" width="16" height="16" rx="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(23 21)">
+            <use fill="#000" filter="url(#xlejd1evaa)" xlink:href="#orlgcvywkb"/>
+            <use fill="url(#u6dwb3091c)" xlink:href="#orlgcvywkb"/>
+        </g>
+        <path d="M29.4 33a.712.712 0 0 1-.519-.21.69.69 0 0 1-.213-.51c0-.201.07-.371.213-.512a.712.712 0 0 1 .519-.21c.196 0 .368.07.513.21.146.14.219.31.219.511 0 .2-.071.37-.214.51A.712.712 0 0 1 29.4 33zm4.067 0a.712.712 0 0 1-.518-.21.69.69 0 0 1-.214-.51c0-.201.071-.371.214-.512a.712.712 0 0 1 .518-.21c.197 0 .368.07.514.21.146.14.219.31.219.511 0 .2-.072.37-.214.51a.712.712 0 0 1-.519.211zm-4.596-6.608 1.119 2.283h2.928l1.271-2.283h-5.318zm-.305-.601h5.99c.216 0 .354.065.411.195.058.13.04.276-.056.436l-1.372 2.433a.947.947 0 0 1-.285.295.689.689 0 0 1-.397.125h-3.08l-.57 1.042H34.2v.6h-4.902c-.285 0-.49-.093-.615-.28-.125-.187-.124-.397.005-.63l.65-1.182-1.545-3.224H27V25h1.19l.376.791zm1.424 2.884-1.119-2.283h5.318l-1.27 2.283h-2.93z" fill="#FFF" fill-rule="nonzero"/>
+    </g>
+</svg>

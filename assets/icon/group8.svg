@@ -1,0 +1,23 @@
+<svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="25.228%" y1="0%" x2="71.755%" y2="100%" id="1kp9ms0ukc">
+            <stop stop-color="#FFF" stop-opacity=".6" offset="0%"/>
+            <stop stop-color="#FFF" stop-opacity=".2" offset="100%"/>
+        </linearGradient>
+        <filter x="-221.9%" y="-209.4%" width="543.8%" height="543.8%" filterUnits="objectBoundingBox" id="icn2c5n3ga">
+            <feMorphology radius=".5" in="SourceAlpha" result="shadowSpreadOuter1"/>
+            <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" in="shadowBlurOuter1"/>
+        </filter>
+        <rect id="7ovhuhoatb" x="0" y="0" width="16" height="16" rx="8"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(23 21)">
+            <use fill="#000" filter="url(#icn2c5n3ga)" xlink:href="#7ovhuhoatb"/>
+            <use fill="url(#1kp9ms0ukc)" xlink:href="#7ovhuhoatb"/>
+        </g>
+        <path d="M28.734 28.758c.17.011.348.017.531.017.184 0 .363-.014.54-.041.176-.027.344-.072.503-.133a1.47 1.47 0 0 0 .43-.255c.128-.11.232-.246.314-.41a1.69 1.69 0 0 0 .155-.595H28.5c.01-.026.04-.079.09-.16l.155-.258c.065-.105.138-.22.218-.343h2.108c0-.094-.046-.189-.136-.285-.091-.096-.201-.182-.33-.258a2.375 2.375 0 0 0-.395-.187 1.019 1.019 0 0 0-.332-.073H28.5c.015-.044.046-.109.095-.196.05-.087.101-.173.156-.258l.144-.225a.617.617 0 0 1 .068-.098H33.5l-.03.06c-.02.04-.046.088-.079.144a20.778 20.778 0 0 1-.22.372 9.375 9.375 0 0 1-.088.144l-.035.057h-1.193c.076.13.143.261.199.393.056.133.092.27.106.41h1.34l-.452.76h-.839a2.158 2.158 0 0 1-.286.864 2.102 2.102 0 0 1-.539.595c-.212.158-.45.279-.71.364-.262.085-.53.144-.807.176a1.556 1.556 0 0 0 .065.103c.019.03.04.06.066.093l2.418 3.33V33h-1.035l-2.647-3.525v-.717z" fill="#FFF" fill-rule="nonzero"/>
+    </g>
+</svg>

@@ -43,6 +43,9 @@ dependencies:
   row_date_picker: ^0.0.6
   swipe_cards: ^1.0.0
   http: ^0.12.2
+  flutter_swiper: ^1.1.6
+  get: ^4.6.5
+  dotted_border: ^2.0.0+2
 
 
 dev_dependencies:
